@@ -1,5 +1,7 @@
 # Python Graphing Calculator
 
+[![Pytest](https://github.com/MuhammadSawalhy/python-graphing-calculator/actions/workflows/pytest.yml/badge.svg)](https://github.com/MuhammadSawalhy/python-graphing-calculator/actions/workflows/pytest.yml)
+
 Graphing calculator built with Pyside2 (Qt) and Matplotlib to create the plot. The app is tested and CSS stylesheet is used to give it a more pleasant and appealing look.
 
 ## Run the app
