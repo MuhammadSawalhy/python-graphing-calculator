@@ -1,4 +1,5 @@
 import sys
+from input_form import InputForm
 from PySide2.QtWidgets import *
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
@@ -16,22 +17,8 @@ class MainWindow(QMainWindow):
         main_layout = QVBoxLayout()
         main_widget.setLayout(main_layout)
 
-        # Create the input field for the function
-        self.function_input = QLineEdit()
-        self.function_input.setPlaceholderText(
-            "Enter a mathematical expression")
-        self.function_input.returnPressed.connect(self.plot_function)
-
-        input = QHBoxLayout()
-        input_label = QLabel("Function: ")
-        input.addWidget(input_label)
-        input.addWidget(self.function_input)
-        main_layout.addLayout(input)
-
-        # Create the button to plot the function
-        plot_button = QPushButton("Plot")
-        plot_button.clicked.connect(self.plot_function)
-        main_layout.addWidget(plot_button)
+        self.input_form = InputForm(self.plot)
+        main_layout.addWidget(self.input_form)
 
         # Create the matplotlib figure and canvas
         self.figure = Figure(figsize=(5, 4), dpi=100)
@@ -41,12 +28,11 @@ class MainWindow(QMainWindow):
         # Set the main widget as the central widget
         self.setCentralWidget(main_widget)
 
-    def plot_function(self):
+    def plot(self):
+        expression = self.input_form.get_expression()
+
         # Clear the current plot
         self.figure.clear()
-
-        # Get the mathematical expression from the input field
-        expression = self.function_input.text()
 
         # Evaluate the expression over a range of x values
         x = np.linspace(-10, 10, 1000)
