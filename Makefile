@@ -4,5 +4,5 @@ run:
 
 .PHONY: tests
 tests:
-	PYTHONPATH="$(shell pwd)" pytest tests
+	PYTHONPATH="$PYTHONPATH:$(shell pwd)" pytest
 

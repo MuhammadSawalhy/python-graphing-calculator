@@ -23,14 +23,12 @@ make
 ## Test the app
 
 ```bash
-pytest tests
+PYTHONPATH="$PYTHONPATH:$(pwd)" pytest
 # or just run
 make tests
 ```
 
 ## Demo of the app
-
-
 
 https://github.com/MuhammadSawalhy/python-graphing-calculator/assets/42011920/fda20305-db6e-4bcb-ac06-66b2c9834a8c
 
