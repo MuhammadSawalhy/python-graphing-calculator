@@ -37,8 +37,8 @@ class InputForm(QWidget):
         self.x_start.input.setValidator(QDoubleValidator())
         self.x_end.input.setValidator(QDoubleValidator())
 
-        self.setFixedHeight(170)
         self.setLayout(main_layout)
+        self.setFixedHeight(self.sizeHint().height())
 
     def get_expression(self):
         return self.expression.input.text()

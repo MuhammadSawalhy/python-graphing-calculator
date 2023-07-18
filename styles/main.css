@@ -1,0 +1,58 @@
+QMainWindow {
+  background-color: #EDE4FF;
+}
+
+QLineEdit {
+  background-color: #D7BBF5;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+QLabel {
+  color: #6528F7;
+}
+
+/* QPushButton { */
+/*   background-color: #071952; */
+/* } */
+
+QPushButton {
+  background-color: #1c87c9;
+  border-radius: 4px;
+  border: none;
+  color: #eeeeee;
+  box-shadow: 4px 0 10px gray;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  animation: glowing 1s linear infinite;
+}
+
+QPushButton:hover {
+  background-color: #071952;
+  border-radius: 4px;
+  border: none;
+  color: #eeeeee;
+  box-shadow: 4px 0 10px gray;
+  cursor: pointer;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  animation: glowing 1s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #2ba805;
+    box-shadow: 0 0 3px #2ba805;
+  }
+  50% {
+    background-color: #49e819;
+    box-shadow: 0 0 10px #49e819;
+  }
+  100% {
+    background-color: #2ba805;
+    box-shadow: 0 0 3px #2ba805;
+  }
+}
