@@ -20,7 +20,7 @@ python main.py
 make
 ```
 
-# Test the app
+## Test the app
 
 ```bash
 pytest tests
