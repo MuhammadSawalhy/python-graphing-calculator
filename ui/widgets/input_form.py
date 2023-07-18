@@ -26,9 +26,9 @@ class InputForm(QWidget):
         main_layout.addLayout(x_limits_hbox)
 
         # Create the button to plot the function
-        plot_button = QPushButton("Plot")
-        plot_button.clicked.connect(plot)
-        main_layout.addWidget(plot_button)
+        self.plot_button = QPushButton("Plot")
+        self.plot_button.clicked.connect(plot)
+        main_layout.addWidget(self.plot_button)
 
         # Set intial values and and constraints of the inputs
         self.expression.input.setText("x ^ 2")
@@ -37,12 +37,7 @@ class InputForm(QWidget):
         self.x_start.input.setValidator(QDoubleValidator())
         self.x_end.input.setValidator(QDoubleValidator())
 
-        # Set a fixed width for the labels
-        self.expression.label.setFixedWidth(60)
-        self.x_start.label.setFixedWidth(60)
-        self.x_end.label.setFixedWidth(60)
-
-        self.setFixedHeight(140)
+        self.setFixedHeight(170)
         self.setLayout(main_layout)
 
     def get_expression(self):

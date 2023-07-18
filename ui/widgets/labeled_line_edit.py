@@ -8,6 +8,10 @@ class LabeledLineEdit(QWidget):
         self.label = QLabel(label)
         self.input = QLineEdit()
 
+        # Set size
+        self.label.setFixedWidth(60)
+        self.input.setFixedHeight(40)
+
         main_layout = QHBoxLayout()
         main_layout.addWidget(self.label)
         main_layout.addWidget(self.input)
